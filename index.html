@@ -1,0 +1,247 @@
+<!doctype html>
+<!--
+变体：standard（yellow / neutral / standard / contours / standard / full）
+主视觉：粒子球前奏、电源点击启动、线框开场与整屏模糊与文字形变转场；HAKAMORI 主页。
+页面类型：开场展示；点击后进入原版大字主页。
+-->
+<html lang="zh-CN" data-theme="light" data-ef-accent="yellow" data-ef-paper="neutral" data-ef-cut="standard" data-ef-ground="contours" data-ef-density="standard" data-ef-motion="full">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f4f4f2">
+  <meta name="description" content="HAKAMORI 的个人空间。">
+  <title>HAKAMORI — 个人空间</title>
+  <link rel="icon" href="assets/emblem.svg?v=architect-paper" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/Saira.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="assets/home-landscape.webp" as="image">
+  <link rel="stylesheet" href="assets/endfield.css">
+  <link rel="stylesheet" href="style.css?v=home-cursor-sparks">
+  <link rel="stylesheet" href="intro.css?v=welcome-fullscreen-scan">
+</head>
+<body class="ef">
+  <main id="home" class="entrance home-screen" aria-label="HAKAMORI 的个人主页" hidden inert>
+    <span class="entry-texture" aria-hidden="true"></span>
+    <span class="colour-strip" aria-hidden="true"><i></i><i></i><i></i></span>
+
+    <span class="entry-header">
+      <span class="identity">
+        <img src="assets/emblem.svg?v=architect-paper" class="emblem" alt="">
+        <span class="identity-type"><strong>HAKAMORI</strong><span>PERSONAL WEBSITE</span></span>
+      </span>
+      <span class="header-signature" aria-label="当前页面：个人主页">
+        <span class="signature-label"><i aria-hidden="true"></i>HOME</span>
+        <svg class="signature-lines" viewBox="0 0 150 30" fill="none" aria-hidden="true">
+          <path d="M0 6h102M36 14h66M72 22h30"/>
+          <path d="M112 12 120 4H140L148 12V20L142 26H120L112 18Z"/>
+          <path d="M125 11H135L139 15 135 19H125L121 15Z" fill="var(--ef-signal)"/>
+        </svg>
+      </span>
+    </span>
+
+    <span class="entry-main">
+      <span class="eyebrow"><span class="short-rule" aria-hidden="true"></span>// WELCOME</span>
+      <h1 class="wordmark" tabindex="-1">HAKAMORI<span class="wordmark-period" aria-hidden="true">.</span></h1>
+      <span class="outline-title">PERSONAL SPACE</span>
+      <span class="welcome-copy">欢迎来到我的个人空间。</span>
+    </span>
+
+    <span class="entry-footer">
+      <span class="home-footer-label">
+        <span class="home-square" aria-hidden="true"></span>
+        <span class="invitation-copy"><strong>欢迎来到我的个人空间。</strong><span class="latin">WELCOME TO MY SPACE</span></span>
+      </span>
+      <span class="latin home-signature">HAKAMORI / PERSONAL WEBSITE</span>
+    </span>
+  </main>
+  <canvas id="home-cursor-sparks" class="home-cursor-sparks" aria-hidden="true" hidden></canvas>
+
+  <div id="entrance" class="lab-intro" data-phase="boot-prelude" role="region" aria-label="HAKAMORI 开场">
+    <canvas id="helix-particles" class="intro-helixes" aria-hidden="true"></canvas>
+    <span class="lab-header" aria-hidden="true"><strong>PORTFOLIO</strong><span>POST-PRODUCTION SHOWREEL</span><span class="lab-header-last">TANGENT <b>OS</b></span><span class="header-blocks"><i></i><i></i><i></i><i></i></span></span>
+    <span class="lab-credit" aria-hidden="true">CREATED BY <strong>HAKAMORI</strong><i></i></span>
+
+    <span class="intro-prelude" aria-hidden="true"><canvas id="prelude-particles" class="prelude-particles"></canvas><span class="prelude-copy"><strong id="access-text"></strong><span>需要访问许可</span></span></span>
+
+    <button id="power-button" class="power-button" type="button" aria-label="启动开场动画" hidden disabled>
+      <svg class="power-glyph" viewBox="0 0 120 120" fill="none" aria-hidden="true"><path class="power-arc" d="M28.9 28.9a44 44 0 1 0 62.2 0" pathLength="1"/><path class="power-stem" d="M60 11v25" pathLength="1"/></svg>
+    </button>
+
+    <span class="intro-identity" aria-hidden="true">
+      <span class="identity-mark">
+        <svg class="identity-symbol" viewBox="0 0 120 120" fill="none"><g class="identity-power"><path d="M28.9 28.9a44 44 0 1 0 62.2 0"/><path d="M60 11v25"/></g><g class="identity-verified"><circle cx="60" cy="60" r="44"/><path class="verified-check" d="m40 61 14 14 28-31" pathLength="1"/></g></svg>
+        <span class="mark-caption">H A K A M O R I</span>
+      </span>
+      <span class="identity-message"><span class="identity-line"><span id="identity-text"></span><span class="type-caret"></span></span><span class="identity-caption">PERSONAL ARCHIVE</span><span class="identity-track"><i></i><i></i><i></i><i></i></span></span>
+    </span>
+
+    <span class="intro-request" aria-hidden="true">
+      <span class="request-frames"><i></i><i></i><i></i><i></i></span>
+      <span class="request-content"><strong>REQUEST RECEIVED</strong><span>HAKAMORI / PERSONAL ARCHIVE</span></span>
+    </span>
+
+    <span class="intro-terrain" aria-hidden="true">
+      <svg class="terrain-waves" viewBox="0 0 1600 900" preserveAspectRatio="none" fill="none"><path id="wave-a"/><path id="wave-b"/></svg>
+      <span class="opening-progress"><span><strong id="opening-progress">0</strong><i>%</i></span><span>OPENING PERSONAL SPACE</span><span class="progress-rule"><i id="progress-fill"></i></span></span>
+    </span>
+
+    <span class="intro-flash" aria-hidden="true">
+      <i class="flash-trace"></i>
+      <svg class="flash-wave-preview" viewBox="0 0 1600 900" preserveAspectRatio="none" fill="none"><path id="flash-wave-a"/><path id="flash-wave-b"/></svg>
+      <span class="flash-inversion"></span><span class="flash-cutout"></span>
+    </span>
+
+    <span class="authorization-panel" aria-hidden="true">
+      <span class="authorization-sheet sheet-back"></span>
+      <span class="authorization-page">
+        <span class="authorization-copy"><strong id="permission-text"></strong><span>*读取完毕*核验通过*</span><svg viewBox="0 0 32 32" fill="none"><rect x="7" y="7" width="18" height="18"/></svg></span>
+      </span>
+    </span>
+
+    <span class="intro-welcome" aria-hidden="true">
+      <svg class="lettering-screen-effects" width="100%" height="100%" fill="none">
+        <defs>
+          <pattern id="lettering-scan-grid" width="77" height="1000" patternUnits="userSpaceOnUse">
+            <path d="M38 9V991" stroke="#fff" stroke-width="1"/>
+            <path d="M38 3v3m0 988v3" stroke="#fff" stroke-width="3"/>
+          </pattern>
+          <path id="lettering-tracking-box" d="M-18-18h36v36h-36zM-18-18l36 36m0-36-36 36"/>
+        </defs>
+        <svg y="14%" width="100%" height="72%" viewBox="0 0 1000 1000" preserveAspectRatio="none">
+          <rect class="lettering-scan-grid" width="1000" height="1000" fill="url(#lettering-scan-grid)"/>
+        </svg>
+        <g class="lettering-tracking" stroke="currentColor" stroke-width="1.2">
+          <use href="#lettering-tracking-box" x="9%" y="13%"/>
+          <use href="#lettering-tracking-box" x="36%" y="18%" style="--track-x:-1;--track-y:.8"/>
+          <use href="#lettering-tracking-box" x="74%" y="9%" style="--track-x:.85;--track-y:1"/>
+          <use href="#lettering-tracking-box" x="93%" y="37%" style="--track-x:-.65;--track-y:-1"/>
+          <use href="#lettering-tracking-box" x="88%" y="81%" style="--track-x:-1;--track-y:.65"/>
+          <use href="#lettering-tracking-box" x="60%" y="90%" style="--track-x:1;--track-y:-1"/>
+          <use href="#lettering-tracking-box" x="16%" y="79%" style="--track-x:-.75;--track-y:-.8"/>
+          <use href="#lettering-tracking-box" x="5%" y="53%" style="--track-x:.95;--track-y:.9"/>
+        </g>
+      </svg>
+      <span class="welcome-mark">
+        <svg class="welcome-guides" viewBox="0 0 600 510" fill="none">
+          <path d="M111 257a189 189 0 0 1 189-189m189 189a189 189 0 0 1-189 189M29 257h115m312 0h115M300 38v38m0 356v38M82 158h53l22 23m286 151 24 23h48"/>
+          <path d="M114 97h44m-44 0v44m328-44h44v44m-372 228v44h44m328-44v44h-44"/>
+          <circle cx="114" cy="257" r="3"/><circle cx="486" cy="257" r="3"/>
+        </svg>
+        <svg class="welcome-assembly" viewBox="20 17 480 406" fill="none">
+          <defs>
+            <path id="welcome-stone" d="M260 132.718 280.636 179.086 298.324 342.4 333.7 352.52 348.66 367.48 378.8 379.8H141.2L171.34 367.48 186.3 352.52 221.676 342.4 239.364 179.086Z"/>
+            <clipPath id="welcome-stone-clip"><use href="#welcome-stone"/></clipPath>
+            <clipPath id="welcome-detail-clip">
+              <path class="welcome-detail-edge" d="M-1000 17H115L-72 423H-1000Z"/>
+            </clipPath>
+          </defs>
+          <g class="welcome-corners" fill="#fff">
+            <g transform="translate(266.31 34.68)"><polygon data-angle="59.43" data-length="429.33"/></g>
+            <g transform="translate(478.60 415)"><polygon data-angle="180" data-length="437.20"/></g>
+            <g transform="translate(35.31 404.32)"><polygon data-angle="-59.43" data-length="429.33"/></g>
+          </g>
+          <path class="welcome-draft" d="M35.31 404.32L253.69 34.68L260 45.35L266.31 34.68L315.28 117M318.86 123L347.54 171M358.89 190L484.69 404.32H472.29L478.60 415H349M339 415H281M239 415H181M171 415H41.40L47.71 404.32H35.31"/>
+          <path class="welcome-form" d="M260 132.718 280.636 179.086 298.324 342.4 333.7 352.52 348.66 367.48 378.8 379.8H141.2L171.34 367.48 186.3 352.52 221.676 342.4 239.364 179.086Z" fill="#fff"/>
+          <g clip-path="url(#welcome-stone-clip)">
+            <image href="assets/emblem-symbol-night.svg" x="20" y="17" width="480" height="406" clip-path="url(#welcome-detail-clip)"/>
+            <path class="welcome-single-scan" d="M115 17H122L-65 423H-72Z" fill="#000"/>
+            <path class="welcome-double-scan" d="M115 17H120L-67 423H-72ZM131 17H149L-38 423H-56Z" fill="#000"/>
+          </g>
+        </svg>
+        <img class="welcome-emblem" src="assets/emblem-symbol-night.svg" width="480" height="406" alt="">
+        <svg class="welcome-lettering" viewBox="20 17 480 406" fill="none">
+          <defs>
+            <clipPath id="lettering-art"><path d="M20 17H500V227H20ZM20 306H500V423H20Z"/></clipPath>
+            <clipPath id="lettering-title"><rect x="20" y="227" width="480" height="59"/></clipPath>
+            <clipPath id="lettering-caption"><rect x="20" y="286" width="480" height="20"/></clipPath>
+            <clipPath id="lettering-slice-top"><rect x="20" y="228" width="480" height="21"/></clipPath>
+            <clipPath id="lettering-slice-mid"><rect x="20" y="249" width="480" height="13"/></clipPath>
+            <clipPath id="lettering-slice-bottom"><rect x="20" y="265" width="480" height="19"/></clipPath>
+            <clipPath id="lettering-echo-inset"><path d="M260 72 446 397H74Z"/></clipPath>
+            <pattern id="lettering-hatch" width="8" height="32" patternUnits="userSpaceOnUse" patternTransform="rotate(42)">
+              <path d="M1 0V32" stroke="#fff" stroke-width="1.2"/>
+            </pattern>
+            <pattern id="lettering-grid" width="74" height="56" patternUnits="userSpaceOnUse">
+              <path d="M74 0H0V56" fill="none" stroke="#fff" stroke-width=".75"/>
+            </pattern>
+            <radialGradient id="lettering-orbit-shade" gradientUnits="userSpaceOnUse" cx="260" cy="220" r="540">
+              <stop offset="51.2%" stop-color="#fff"/>
+              <stop offset="66%" stop-color="#fff" stop-opacity=".73"/>
+              <stop offset="85%" stop-color="#fff" stop-opacity=".33"/>
+              <stop offset="100%" stop-color="#fff" stop-opacity=".1"/>
+            </radialGradient>
+            <mask id="lettering-ghost-shade" maskUnits="userSpaceOnUse" x="-1220" y="-120" width="2960" height="680">
+              <rect x="-1220" y="-120" width="2960" height="680" fill="url(#lettering-orbit-shade)"/>
+            </mask>
+            <image id="lettering-lockup" href="assets/emblem-night.svg" x="20" y="17" width="480" height="406"/>
+            <clipPath id="lettering-ghost-clip">
+              <text class="lettering-ghost-shape" x="260" y="269" textLength="462" lengthAdjust="spacingAndGlyphs" text-anchor="middle" font-family="Arial Black, Arial, sans-serif" font-size="138" font-weight="900" letter-spacing="-4">HAKAMORI</text>
+            </clipPath>
+            <rect id="lettering-ghost-ink" x="-1220" y="-120" width="2960" height="680" fill="url(#lettering-hatch)" clip-path="url(#lettering-ghost-clip)" mask="url(#lettering-ghost-shade)"/>
+          </defs>
+          <rect class="lettering-grid" x="-242" y="-120" width="1004" height="685" fill="url(#lettering-grid)"/>
+          <g class="lettering-orbit" stroke="currentColor" stroke-width="1">
+            <circle pathLength="1" cx="260" cy="220" r="260" transform="rotate(-76 260 220)"/>
+            <circle class="lettering-orbit-outer" pathLength="1" cx="260" cy="220" r="276" transform="rotate(106 260 220)"/>
+            <path d="M-29 220h30m518 0h30M260-67v30m0 514v30"/>
+          </g>
+          <g class="lettering-guides" stroke="currentColor" stroke-width="1">
+            <path pathLength="1" d="M-88 121H71l42 42h41M-61 108H77l39 39M-58 95H85l30 30M359 176h44l40-40h157M366 324h71l29 28h125M349 340h82l30 28h78M-41 298h129l33-26M-54 311H80l33-26"/>
+          </g>
+          <g class="lettering-guide-pulses" stroke="currentColor" stroke-width="4">
+            <path d="M49 121h22" style="--pulse-x:-108px"/>
+            <path d="M55 108h22" style="--pulse-x:-112px"/>
+            <path d="M63 95h22" style="--pulse-x:-116px"/>
+            <path d="M66 298h22" style="--pulse-x:-97px"/>
+            <path d="M58 311h22" style="--pulse-x:-102px"/>
+            <path d="M445 136h22" style="--pulse-x:104px"/>
+            <path d="M467 352h22" style="--pulse-x:66px"/>
+            <path d="M462 368h22" style="--pulse-x:44px"/>
+          </g>
+          <g class="lettering-register" fill="currentColor" font-family="monospace" font-size="8" letter-spacing="1.2">
+            <text x="-90" y="84">// PERSONAL ARCHIVE</text>
+            <text x="491" y="125">FIG. 01 / AXIS</text>
+            <text x="475" y="343">OBELISK / MARK</text>
+            <text x="-69" y="318">HAKAMORI / 01</text>
+            <path d="M-89 118h5v5h-5zM538 134h4v4h-4zM549 350h5v5h-5zM39 295h4v4h-4z"/>
+          </g>
+          <use class="lettering-ghost lettering-ghost-back" href="#lettering-ghost-ink"/>
+          <use class="lettering-art" href="#lettering-lockup" clip-path="url(#lettering-art)"/>
+          <g class="lettering-echo-mark" fill="currentColor">
+            <path d="M260 40 468 397H52Z" fill="#000"/>
+            <image href="assets/emblem-symbol-night.svg" x="20" y="17" width="480" height="406" clip-path="url(#lettering-echo-inset)"/>
+            <path d="M260 40 468 397H303l14-24h109L260 85 101 366H72Z"/>
+            <path d="M260 149 278 180H242ZM260 180 278 211H242ZM224 180 242 211H206ZM296 180 314 211H278Z"/>
+            <path d="M213 235H307M226 246H294M249 272H271" fill="none" stroke="currentColor" stroke-width="1.2"/>
+          </g>
+          <rect class="lettering-wordmark-band" x="20" y="227" width="480" height="79" fill="#000"/>
+          <g class="lettering-signal" fill="#fffa00">
+            <path class="signal-upper" d="M-78 88h61v5h41v4h28v3H-56v-5h-22zM479 150h41v4h30v4h46v3H490v-5h-11z"/>
+            <path class="signal-lower" d="M-34 347h31v4h49v4h33v3H-18v-6h-16zM476 388h37v4h41v5h35v3H498v-6h-22z"/>
+            <path class="signal-edge" d="M330-42h28v7h160v-4h54v8H350v-4h-20z"/>
+            <path class="signal-tail" d="M510 427h35v4h34v6h23v5h-67v-6h-25z"/>
+          </g>
+          <g class="lettering-bars" fill="currentColor">
+            <path d="M155 235h7v47h-7zM169 235h4v47h-4zM181 235h9v47h-9zM206 235h4v47h-4zM268 235h6v47h-6z"/>
+            <path d="M94 235h5v47h-5zM113 235h11v47h-11zM218 235h12v47h-12zM237 235h5v47h-5zM281 235h6v47h-6zM305 235h3v47h-3zM319 235h12v47h-12zM349 235h5v47h-5z"/>
+            <path d="M72 235h17v47H72zM132 235h12v47h-12zM250 235h8v47h-8zM290 235h6v47h-6zM337 235h5v47h-5zM362 235h9v47h-9zM385 235h22v47h-22zM413 235h26v47h-26zM445 235h4v47h-4z"/>
+          </g>
+          <g class="lettering-slices">
+            <use href="#lettering-lockup" clip-path="url(#lettering-slice-top)"/>
+            <use href="#lettering-lockup" clip-path="url(#lettering-slice-mid)"/>
+            <use href="#lettering-lockup" clip-path="url(#lettering-slice-bottom)"/>
+          </g>
+          <use class="lettering-title" href="#lettering-lockup" clip-path="url(#lettering-title)"/>
+          <g class="lettering-caption" clip-path="url(#lettering-caption)">
+            <use href="#lettering-lockup"/>
+          </g>
+          <use class="lettering-ghost lettering-ghost-front" href="#lettering-ghost-ink"/>
+        </svg>
+      </span>
+    </span>
+
+    <span id="center-split" class="center-split" aria-hidden="true" inert></span>
+  </div>
+  <script src="particles.js?v=home-cursor-sparks-soft"></script>
+  <script src="app.js?v=home-cursor-sparks"></script>
+</body>
+</html>
